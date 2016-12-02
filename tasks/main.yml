@@ -1,0 +1,14 @@
+---
+- name: Download AWS Inspector agent
+  get_url:
+    url: "{{ aws_inspector_download_url }}"
+    dest: "{{ aws_inspector_download_destination }}"
+
+- name: Install AWS Inspector agent
+  shell: bash "{{ aws_inspector_download_destination }}"
+
+- name: Start awsagent service
+  service:
+    name: awsagent
+    state: started
+    enabled: yes
