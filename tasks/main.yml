@@ -6,3 +6,9 @@
 
 - name: Install AWS Inspector agent
   shell: bash "{{ aws_inspector_download_destination }}"
+
+- name: Start awsagent service
+  service:
+    name: awsagent
+    state: started
+    enabled: yes
