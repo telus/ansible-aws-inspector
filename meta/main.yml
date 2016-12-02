@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  author: "Alex Podobnik"
+  company: "TELUS digital"
+  description: "Amazon Inspector is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS"
+  license: MIT
+  platforms:
+    - name: Ubuntu
+      versions:
+      - trusty
+  categories:
+    - system
